@@ -35,7 +35,6 @@ fn main() {
         .map(|(left, right)| (left - right).abs() as i64)
         .sum();
     println!("total_diff = {}", total_diff);
-
     let total_sim: i32 = similarity(left_side, right_side);
 
     println!("total_sim = {}", total_sim);

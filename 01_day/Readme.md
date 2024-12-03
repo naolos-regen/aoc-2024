@@ -1,11 +1,11 @@
 # Day 2: Red-Nosed Reports
 
 ## Tested on [Julia](https://julialang.org/)
-
 ```bash
 >>> julia -v
 julia version 1.11.1
 ```
+
 ## Expected Output:
 ```julia
 [naolos@raven]
@@ -22,6 +22,4 @@ julia version 1.11.1
 julia> include("main.jl")
 Part One: 559
 Part Two: 601
-
-julia>
 ```

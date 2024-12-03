@@ -4,7 +4,7 @@
 # Part 1:
 VAR=$(rg -P -o -e "mul\([0-9]+,[0-9]+\)" input.txt | sed 's/,/*/g' | rg -P -o -e '[0-9]+[*][0-9]+')
 PLUS=$(echo $VAR | sed "s/ /+/g")
-echo $(($PLUS))
+echo "Part 1: $(($PLUS))"
 
 
 # Part 2:
@@ -23,4 +23,4 @@ while read -r LINE; do
         SUM=$((SUM + RESULT))
     fi
 done < <(rg -o "mul\\([0-9]+,[0-9]+\\)|do\\(\\)|don't\\(\\)" input.txt)
-echo "Final sum: $SUM"
+echo "Part 2: $SUM"

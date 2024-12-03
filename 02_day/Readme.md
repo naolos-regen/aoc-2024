@@ -1,3 +1,6 @@
+# Day 3: Mull It Over
+
+## Tested on [Bash](https://www.gnu.org/software/bash/) & [Zsh](https://ohmyz.sh/)
 ```bash
 >>> $ sh --version
 sh --version
@@ -12,3 +15,11 @@ There is NO WARRANTY, to the extent permitted by law.
 >>> $ zsh --version
 zsh 5.9 (x86_64-pc-linux-gnu)
 ```
+
+## expected Output:
+```bash
+>>> ./main.bash
+Part 1: 191183308
+Part 2: 92082041
+```
+

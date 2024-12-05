@@ -29,6 +29,27 @@ char **read_grid(const char *filename, int *rows, int *cols) {
     return grid;
 }
 
+int read_arr_grid(const char *filename, char grid[300][300], int *rows, int *cols)
+{
+    FILE *file = fopen(filename, "r");
+    if(!file){
+        perror("Error opening file");
+        return -1;
+    }
+    char buffer[MAX_COLS];
+    *rows = 0;
+
+    while(fgets(buffer,sizeof(buffer),file) && *rows < MAX_ROWS){
+        buffer[strcspn(buffer, "\n")] = '\0';
+        strcpy(grid[*rows], buffer);
+        (*rows)++;
+    }
+
+    *cols = strlen(grid[0]);
+    fclose(file);
+
+    return 0;
+}
 
 void free_grid(char **grid, int rows) {
     for (int i = 0; i < rows; i++) {

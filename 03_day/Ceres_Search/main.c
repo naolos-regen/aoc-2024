@@ -1,4 +1,5 @@
 #include "main.h"
+#include "read_file.h"
 
 int directions[8][2] = {
     {0,   1}, // RIGHT
@@ -9,22 +10,6 @@ int directions[8][2] = {
     {1,  -1}, // DOWN-LEFT
     {-1,  1}, // UP-RIGHT
     {-1, -1}, // UP-LEFT
-};
-
-int offsets_forward[5][2] = {
-    {0, 0},  // Top-left M
-    {2, 0},  // Bottom-left M
-    {1, 1},  // Center A
-    {0, 2},  // Top-right S
-    {2, 2}   // Bottom-right S
-};
-
-int offsets_backward[5][2] = {
-    {0, 2},  // Top-left S
-    {2, 2},  // Bottom-left S
-    {1, 1},  // Center A
-    {0, 0},  // Top-right M
-    {2, 0}   // Bottom-right M
 };
 
 
@@ -62,12 +47,15 @@ int count_xmas(char **grid, int rows, int cols) {
 int main() {
     const char *filename = "input.txt";
     int rows, cols;
+
     char **grid = read_grid(filename, &rows, &cols);
-    
+
     int result = count_xmas(grid, rows, cols);
     printf("Part 1: %d\n", result);
-    
+
     free_grid(grid, rows);
+
+
     return 0;
 }
 

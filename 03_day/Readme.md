@@ -17,7 +17,16 @@ gcc version 14.2.1 20240910 (GCC)
 ## Expected Output:
 
 ```bash
->>> ./main
+>>> make part_one
+gcc -Wall -g -c main.c -o main.o
+gcc -Wall -g -c read_file.c -o read_file.o
+gcc main.o read_file.o -o ceres_part_one 
+>>> ./ceres_part_one
 Part 1: 2397
-Part 2: ???
+>>> make part_two
+gcc -Wall -g -c part_two.c -o part_two.o
+gcc -Wall -g -c read_file.c -o read_file.o
+gcc part_two.o read_file.o -o ceres_part_two 
+>>> ./ceres_part_two
+Part 2: 1824
 ```

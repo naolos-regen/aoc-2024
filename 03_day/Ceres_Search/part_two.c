@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "read_file.h"
 
 #define MAX_ROWS 300
@@ -50,7 +49,7 @@ int main() {
 
     int result = count_xmas_patterns(grid, rows, cols);
 
-    printf("Number of X-MAS patterns: %d\n", result);
+    printf("Part 2: %d\n", result);
 
     return 0;
 }

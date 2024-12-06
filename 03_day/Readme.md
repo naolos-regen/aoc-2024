@@ -1,6 +1,6 @@
 # Day 4: Ceres Searcha
 
-## Tested on [C](https://en.wikipedia.org/wiki/C_(programming_language)
+## Tested on [C](https://en.wikipedia.org/wiki/C_(Programming_language))
 
 ```bash
 >>> gcc -v
